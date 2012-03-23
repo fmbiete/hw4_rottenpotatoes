@@ -1,0 +1,11 @@
+-# in app/views/movies/directors.html.haml
+
+%h2 Other movies from #{@movie.director}:
+
+%ul#details
+Movies:
+- @directorMovies.each do |movie|
+  %li
+    = movie.title
+    
+= link_to 'Back to movie', movie_path(@movie)
